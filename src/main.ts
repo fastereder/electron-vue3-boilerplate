@@ -1,8 +1,13 @@
 import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
+import router from './router'
 
-createApp(App).mount('#app').$nextTick(() => {
+const app = createApp(App)
+
+app.use(router)
+
+app.mount('#app').$nextTick(() => {
   // Remove Preload scripts loading
   postMessage({ payload: 'removeLoading' }, '*')
 
