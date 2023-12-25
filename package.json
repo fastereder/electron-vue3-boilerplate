@@ -1,7 +1,7 @@
 {
   "name": "electron-vue3-boilerplate",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "prepare": "husky install",
     "dev": "vite",
