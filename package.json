@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vue-tsc && vite build && electron-builder",
     "preview": "vite preview",
-    "lint:script": "eslint --ext .ts,vue --ignore-path .gitignore ."
+    "postinstall": "electron-builder install-app-deps",
+    "lint:script": "eslint --ext .ts,vue --ignore-path .gitignore .",
+    "test": "playwright test"
   },
   "dependencies": {
     "pinia": "^2.1.7",
@@ -17,6 +19,7 @@
   "devDependencies": {
     "@commitlint/cli": "^18.4.3",
     "@commitlint/config-conventional": "^18.4.3",
+    "@playwright/test": "^1.40.1",
     "@typescript-eslint/eslint-plugin": "^6.15.0",
     "@typescript-eslint/parser": "^6.15.0",
     "@vitejs/plugin-vue": "^4.3.4",
